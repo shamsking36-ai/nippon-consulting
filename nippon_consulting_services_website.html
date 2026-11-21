@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIPPON CONSULTING SERVICES | Structural Design, Architectural Plan &amp; Project Cost Estimation</title>
+  <meta name="description" content="NIPPON CONSULTING SERVICES led by Er. Md Shams Tabrez, MIE — Structural Design of RCC Buildings, Architectural Plans, DPR Preparation, and Pre-Bid Estimation of EPC & HAM Highway and Railway Projects." />
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#04152E',
+              900: '#07234B',
+              800: '#0D3163',
+              700: '#15427E',
+              600: '#1E559B',
+              100: '#E6EEF8',
+              50:  '#F2F6FC'
+            },
+            crimson: {
+              800: '#8F0821',
+              700: '#B80C2D',
+              600: '#D1193B',
+              500: '#E62E50',
+              100: '#FCE8EC',
+              50:  '#FFF5F7'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(7, 35, 75, 0.08)',
+            elevated: '0 14px 34px -6px rgba(7, 35, 75, 0.16)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Subtle CAD Engineering Grid Background */
+    .cad-grid-dark {
+      background-color: #07234B;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .cad-grid-light {
+      background-color: #F8FAFC;
+      background-image:
+        linear-gradient(to right, rgba(7, 35, 75, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(7, 35, 75, 0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0D3163;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B80C2D;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-crimson-700 selection:text-white">
+
+  <!-- ==================== INLINE SVG LOGO SYMBOL (NAVY & CRIMSON) ==================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="nippon-logo" viewBox="0 0 640 210">
+      <!-- Outer Navy Isometric Hexagon Cube -->
+      <path d="M 105 14 L 195 66 L 195 162 L 105 204 L 15 162 L 15 66 Z" fill="none" stroke="#07234B" stroke-width="11" stroke-linejoin="round" />
+      <!-- Navy Inner Isometric Y-Edges -->
+      <path d="M 15 66 L 105 118 L 195 66" fill="none" stroke="#07234B" stroke-width="10" stroke-linejoin="round" />
+      <path d="M 105 118 L 105 204" fill="none" stroke="#07234B" stroke-width="10" stroke-linecap="round" />
+      <!-- White Knockout Clearance Behind Crimson Roof -->
+      <path d="M 12 122 L 105 64 L 198 122" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linejoin="round" />
+      <!-- Crimson Red Pitched House Roof & Chimney -->
+      <rect x="139" y="66" width="13" height="26" fill="#B80C2D" />
+      <path d="M 15 120 L 105 64 L 195 120" fill="none" stroke="#B80C2D" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+      <!-- Crimson Front Vertical Pillar & Base Accent -->
+      <path d="M 105 118 L 105 204 L 195 162" fill="none" stroke="#B80C2D" stroke-width="11" stroke-linejoin="round" />
+      <!-- Brand Wordmark -->
+      <text x="228" y="114" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="76" letter-spacing="3" fill="#07234B">NIPPON</text>
+      <text x="232" y="160" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="27" letter-spacing="4.2" fill="#334155">CONSULTING SERVICES</text>
+    </symbol>
+  </svg>
+
+  <!-- ==================== TOP UTILITY BAR ==================== -->
+  <div class="bg-navy-950 text-slate-200 text-xs border-b border-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1">
+        <span class="inline-flex items-center gap-1.5 font-medium">
+          <span class="w-2 h-2 rounded-full bg-crimson-600"></span>
+          <span>Hatwar, Uttar Dinajpur (WB) &amp; Rajgarh Road, Guwahati (Assam)</span>
+        </span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4 font-mono">
+        <a href="tel:+919749805844" class="hover:text-white transition-colors">Call: +91 97498 05844</a>
+        <span class="text-navy-700">|</span>
+        <a href="https://wa.me/918013229177" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition-colors">WhatsApp: +91 80132 29177</a>
+        <span class="hidden md:inline text-navy-700">|</span>
+        <a href="mailto:neservices.2021@gmail.com" class="hidden md:inline hover:text-white transition-colors">neservices.2021@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== STICKY HEADER & NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center focus:outline-none group" aria-label="NIPPON CONSULTING SERVICES Home">
+          <svg class="h-12 sm:h-14 w-auto transition-transform duration-200 group-hover:scale-[1.01]" role="img" aria-label="NIPPON CONSULTING SERVICES Logo">
+            <use href="#nippon-logo"></use>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-navy-950" aria-label="Primary Navigation">
+          <a href="#home" class="hover:text-crimson-700 transition-colors">Home</a>
+          <a href="#about" class="hover:text-crimson-700 transition-colors">About</a>
+          <a href="#services" class="hover:text-crimson-700 transition-colors">Services</a>
+          <a href="#strength" class="hover:text-crimson-700 transition-colors">Our Strength</a>
+          <a href="#contact" class="hover:text-crimson-700 transition-colors">Contact Us</a>
+        </nav>
+
+        <!-- Desktop Action Buttons -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="#contact" class="px-5 py-2.5 rounded-lg bg-crimson-700 hover:bg-crimson-800 text-white text-sm font-bold shadow-sm transition-all">
+            Request Consultation
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button" class="lg:hidden p-2.5 rounded-lg text-navy-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-navy-700" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle Navigation Menu">
+          <svg id="menuIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menuIconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-1.5 shadow-xl">
+      <a href="#home" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-semibold text-navy-950 hover:bg-navy-50">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-semibold text-navy-950 hover:bg-navy-50">About</a>
+      <a href="#services" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-semibold text-navy-950 hover:bg-navy-50">Services</a>
+      <a href="#strength" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-semibold text-navy-950 hover:bg-navy-50">Our Strength</a>
+      <a href="#contact" class="mobile-nav-link block px-3.5 py-2.5 rounded-lg text-sm font-semibold text-navy-950 hover:bg-navy-50">Contact Us</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-nav-link block w-full text-center px-4 py-3 rounded-lg bg-crimson-700 text-white text-sm font-bold">
+          Request Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO / OPENING INTRODUCTION ==================== -->
+    <section id="home" class="cad-grid-dark relative overflow-hidden text-white border-b-4 border-crimson-700">
+      <!-- Subtle Decorative Accent -->
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-crimson-700/15 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-navy-600/20 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <!-- Left Column: Firm Brand & Opening Introduction -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Brand Presentation Plaque -->
+            <div class="inline-block bg-white rounded-2xl p-4 sm:p-5 shadow-elevated border-l-8 border-crimson-700 max-w-full">
+              <svg class="h-14 sm:h-16 w-auto max-w-full" role="img" aria-label="NIPPON CONSULTING SERVICES">
+                <use href="#nippon-logo"></use>
+              </svg>
+              <div class="mt-2.5 pt-2.5 border-t border-slate-200 flex flex-wrap items-center gap-2 text-[11px] sm:text-xs font-extrabold tracking-wider text-navy-900 uppercase">
+                <span>STRUCTURAL DESIGN</span>
+                <span class="text-crimson-700 font-black">|</span>
+                <span>ARCHITECTURAL PLAN</span>
+                <span class="text-crimson-700 font-black">|</span>
+                <span>PROJECT COST ESTIMATION</span>
+              </div>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
+              Engineering Excellence in Building Design &amp;
+              <span class="text-crimson-500">Project Estimation and Costing</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">
+              Delivering IS-code compliant RCC Structural Designs, functional Architectural Plans, Detailed Project Reports (DPR), and precision Pre-Bid Cost Estimation for EPC &amp; HAM Highway, Tunnel, and Railway Projects.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#services" class="px-6 py-3.5 rounded-xl bg-crimson-700 hover:bg-crimson-600 text-white font-bold text-sm sm:text-base shadow-lg transition-all inline-flex items-center gap-2">
+                <span>Explore Our Services</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold text-sm sm:text-base transition-all">
+                Request Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Engineering CAD Schematic Viewer -->
+          <div class="lg:col-span-5">
+            <div class="bg-navy-950/90 border border-navy-700 rounded-2xl p-5 sm:p-6 shadow-2xl">
+              <div class="flex items-center justify-between gap-2 pb-4 border-b border-navy-800">
+                <div>
+                  <span class="text-[11px] font-mono uppercase tracking-widest text-crimson-500 font-bold">Technical Workspace</span>
+                  <h2 id="schematicTitle" class="text-sm sm:text-base font-bold text-white mt-0.5">Multi-Storey RCC Frame &amp; Shear Core</h2>
+                </div>
+                <div class="flex items-center gap-1.5 bg-navy-900 p-1 rounded-lg border border-navy-700">
+                  <button type="button" data-schematic="rcc" class="schematic-tab px-2.5 py-1 rounded text-xs font-mono font-bold bg-crimson-700 text-white transition-colors">RCC</button>
+                  <button type="button" data-schematic="arch" class="schematic-tab px-2.5 py-1 rounded text-xs font-mono font-bold text-slate-300 hover:text-white transition-colors">PLAN</button>
+                  <button type="button" data-schematic="epc" class="schematic-tab px-2.5 py-1 rounded text-xs font-mono font-bold text-slate-300 hover:text-white transition-colors">EPC</button>
+                </div>
+              </div>
+
+              <!-- Dynamic SVG Schematic Display -->
+              <div class="my-4 bg-navy-900/80 rounded-xl border border-navy-800 p-4 flex items-center justify-center h-64">
+                <!-- RCC Schematic -->
+                <svg id="svg-rcc" class="w-full h-full" viewBox="0 0 360 220" aria-label="RCC Structural Frame Diagram">
+                  <defs>
+                    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                    </pattern>
+                  </defs>
+                  <rect width="360" height="220" fill="url(#smallGrid)" />
+                  <!-- Foundation Footings -->
+                  <rect x="48" y="184" width="34" height="10" fill="#B80C2D" />
+                  <rect x="133" y="184" width="34" height="10" fill="#B80C2D" />
+                  <rect x="218" y="184" width="34" height="10" fill="#B80C2D" />
+                  <rect x="288" y="184" width="34" height="10" fill="#B80C2D" />
+                  <!-- Columns -->
+                  <line x1="65" y1="32" x2="65" y2="184" stroke="#60A5FA" stroke-width="5" />
+                  <line x1="150" y1="32" x2="150" y2="184" stroke="#60A5FA" stroke-width="5" />
+                  <line x1="235" y1="32" x2="235" y2="184" stroke="#60A5FA" stroke-width="5" />
+                  <line x1="305" y1="68" x2="305" y2="184" stroke="#60A5FA" stroke-width="5" />
+                  <!-- Lift Shear Core Highlight -->
+                  <rect x="152" y="20" width="32" height="164" fill="rgba(184, 12, 45, 0.28)" stroke="#E62E50" stroke-width="2" />
+                  <!-- Floor Slabs & Beams -->
+                  <line x1="55" y1="32" x2="245" y2="32" stroke="#FFFFFF" stroke-width="4" />
+                  <line x1="55" y1="68" x2="315" y2="68" stroke="#FFFFFF" stroke-width="4" />
+                  <line x1="55" y1="106" x2="315" y2="106" stroke="#FFFFFF" stroke-width="4" />
+                  <line x1="55" y1="144" x2="315" y2="144" stroke="#FFFFFF" stroke-width="4" />
+                  <!-- Dimension Callouts -->
+                  <text x="18" y="198" fill="#94A3B8" font-family="JetBrains Mono" font-size="10">IS 456:2000 &amp; IS 1893 (PART 1)</text>
+                  <text x="235" y="24" fill="#FCA5A5" font-family="JetBrains Mono" font-size="10">SHEAR CORE</text>
+                </svg>
+
+                <!-- Architectural Plan Schematic -->
+                <svg id="svg-arch" class="w-full h-full hidden" viewBox="0 0 360 220" aria-label="Architectural Floor Plan Diagram">
+                  <rect x="35" y="22" width="290" height="165" fill="none" stroke="#FFFFFF" stroke-width="4" />
+                  <line x1="145" y1="22" x2="145" y2="187" stroke="#60A5FA" stroke-width="3" />
+                  <line x1="235" y1="22" x2="235" y2="120" stroke="#60A5FA" stroke-width="3" />
+                  <line x1="145" y1="120" x2="325" y2="120" stroke="#60A5FA" stroke-width="3" />
+                  <rect x="148" y="25" width="38" height="45" fill="rgba(184,12,45,0.3)" stroke="#E62E50" stroke-width="2" />
+                  <text x="58" y="105" fill="#E2E8F0" font-family="JetBrains Mono" font-size="11">LIVING / HALL</text>
+                  <text x="252" y="75" fill="#E2E8F0" font-family="JetBrains Mono" font-size="10">BEDROOM 01</text>
+                  <text x="210" y="158" fill="#E2E8F0" font-family="JetBrains Mono" font-size="10">MASTER SUITE</text>
+                  <text x="35" y="206" fill="#94A3B8" font-family="JetBrains Mono" font-size="10">VASTU &amp; MUNICIPAL BYELAW COMPLIANT</text>
+                </svg>
+
+                <!-- EPC / HAM Highway & Railway Schematic -->
+                <svg id="svg-epc" class="w-full h-full hidden" viewBox="0 0 360 220" aria-label="EPC Highway & Railway Pre-Bid Diagram">
+                  <path d="M 20 155 Q 120 75 200 125 T 340 65" fill="none" stroke="#E62E50" stroke-width="5" />
+                  <path d="M 20 165 Q 120 85 200 135 T 340 75" fill="none" stroke="#60A5FA" stroke-width="2.5" stroke-dasharray="6 4" />
+                  <!-- Embankment & Bridge Pier Markers -->
+                  <line x1="115" y1="102" x2="115" y2="180" stroke="#FFFFFF" stroke-width="3" />
+                  <line x1="205" y1="126" x2="205" y2="180" stroke="#FFFFFF" stroke-width="3" />
+                  <line x1="285" y1="88" x2="285" y2="180" stroke="#FFFFFF" stroke-width="3" />
+                  <line x1="20" y1="180" x2="340" y2="180" stroke="#475569" stroke-width="2" />
+                  <text x="24" y="34" fill="#FCA5A5" font-family="JetBrains Mono" font-size="11">EPC &amp; HAM PRE-BID BOQ / QUANTITY TAKEOFF</text>
+                  <text x="24" y="204" fill="#94A3B8" font-family="JetBrains Mono" font-size="10">HIGHWAY • MAJOR BRIDGES • TUNNELS • RAILWAYS</text>
+                </svg>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 text-center pt-1">
+                <div class="bg-navy-900 rounded-lg p-2.5 border border-navy-800">
+                  <div class="text-base sm:text-lg font-extrabold text-white">12+ Yrs</div>
+                  <div class="text-[11px] text-slate-300">Experience</div>
+                </div>
+                <div class="bg-navy-900 rounded-lg p-2.5 border border-navy-800">
+                  <div class="text-base sm:text-lg font-extrabold text-crimson-500">30+</div>
+                  <div class="text-[11px] text-slate-300">Building Designs</div>
+                </div>
+                <div class="bg-navy-900 rounded-lg p-2.5 border border-navy-800">
+                  <div class="text-base sm:text-lg font-extrabold text-white">100+</div>
+                  <div class="text-[11px] text-slate-300">EPC Pre-Bid Works</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION & CREDENTIALS ==================== -->
+    <section id="about" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <!-- Left Column: Firm Overview & Track Record -->
+          <div class="lg:col-span-6 space-y-6">
+            <div>
+              <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-crimson-700">
+                <span class="w-6 h-0.5 bg-crimson-700"></span>
+                <span>About the Firm</span>
+              </span>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 mt-2 tracking-tight">
+                Multidisciplinary Civil &amp; Structural Engineering Consultancy
+              </h2>
+            </div>
+
+            <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+              <strong class="text-navy-900">NIPPON CONSULTING SERVICES</strong> is a multidisciplinary civil and structural engineering firm led by Principal Consultant <strong class="text-navy-900">Er. Md Shams Tabrez, MIE</strong>. He is graduate in Civil Engineering with a working experience of more than 12 years. He has successfully completed more that 30 projects of Building Design and completed moire that 100 project of EPC Pre-Bid estimation work of Highway and Railway Projects. NIPPON CONSULTING SERVICES provides comprehensive design, planning, Detailed Project Report (DPR) preparation, and pre-bid cost estimation services for residential and commercial buildings.
+            </p>
+
+            <!-- Track Record Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-navy-50 border border-navy-100">
+                <div class="text-2xl font-black text-navy-900">12+ Years</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">Civil &amp; Structural Engineering Experience</div>
+              </div>
+              <div class="p-4 rounded-xl bg-crimson-50 border border-crimson-100">
+                <div class="text-2xl font-black text-crimson-700">30+ Projects</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">RCC Building Structural &amp; Architectural Designs</div>
+              </div>
+              <div class="p-4 rounded-xl bg-navy-50 border border-navy-100">
+                <div class="text-2xl font-black text-navy-900">100+ Projects</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">EPC &amp; HAM Highway &amp; Railway Pre-Bid Estimations</div>
+              </div>
+            </div>
+
+            <!-- Engineering Codes & Software Badges -->
+            <div class="pt-2">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Design Standards &amp; Analysis Suite</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-navy-900 font-mono text-xs font-semibold border border-slate-200">IS 456:2000 (RCC)</span>
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-navy-900 font-mono text-xs font-semibold border border-slate-200">IS 1893 Part 1 (Seismic)</span>
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-navy-900 font-mono text-xs font-semibold border border-slate-200">IS 800 &amp; IS 875</span>
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-navy-900 font-mono text-xs font-semibold border border-slate-200">IRC &amp; MoRTH Specs</span>
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-navy-900 font-mono text-xs font-semibold border border-slate-200">Indian Railways RDSO</span>
+                <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-navy-900 font-mono text-xs font-semibold border border-slate-200">STAAD.Pro • ETABS • AutoCAD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Principal Consultant Credentials Card -->
+          <div class="lg:col-span-6">
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-elevated bg-white">
+              <!-- Navy Top Banner -->
+              <div class="bg-navy-900 px-6 py-6 border-b-4 border-crimson-700 flex items-start justify-between gap-4">
+                <div>
+                  <div class="text-[11px] font-mono font-bold uppercase tracking-widest text-crimson-500">Principal Consultant</div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-1">Er. MD SHAMS TABREZ, <span class="text-base font-bold">MIE</span></h3>
+                  <p class="text-sm font-medium text-slate-200 mt-0.5">Principal Structural Engineer &amp; Consultant</p>
+                </div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-crimson-700 text-white font-black text-sm flex items-center justify-center shadow-md">
+                  MIE
+                </div>
+              </div>
+
+              <!-- Credentials List -->
+              <div class="p-6 space-y-4">
+                <blockquote class="text-sm italic text-slate-600 bg-slate-50 p-4 rounded-xl border-l-4 border-navy-900">
+                  “Our commitment is to deliver safe, economical, and buildable engineering designs on schedule—empowering developers and infrastructure contractors to build with confidence.”
+                </blockquote>
+
+                <div class="divide-y divide-slate-200 text-sm">
+                  <div class="py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <span class="text-slate-500 font-medium">IAStructE Membership</span>
+                    <span class="font-semibold text-navy-900 text-left sm:text-right">Associate Member, Indian Association of Structural Engineers (IAStructE) • <span class="font-mono text-crimson-700">AM-518</span></span>
+                  </div>
+                  <div class="py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <span class="text-slate-500 font-medium">IEI Membership</span>
+                    <span class="font-semibold text-navy-900 text-left sm:text-right">Member, The Institution of Engineers (India) • <span class="font-mono text-crimson-700">Reg. No. M-1857295</span></span>
+                  </div>
+                  <div class="py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <span class="text-slate-500 font-medium">Municipal Registration</span>
+                    <span class="font-semibold text-navy-900 text-left sm:text-right">Registered Structural Engineer, GMC (C.Eng) • <span class="font-mono text-crimson-700">Reg. TR/RTP/04/Engg(C).Sep/26/11</span></span>
+                  </div>
+                  <div class="py-3 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                    <span class="text-slate-500 font-medium shrink-0">Office Locations</span>
+                    <span class="font-semibold text-navy-900 text-left sm:text-right">
+                      Shop No. 2, NH-31, Hatwar, Uttar Dinajpur, WB<br />
+                      Rajgarh Road, Guwahati, Assam - 781007, India
+                    </span>
+                  </div>
+                </div>
+
+                <div class="pt-2">
+                  <a href="#contact" class="w-full py-3.5 px-5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm">
+                    <span>Consult With Our Engineering Team</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION (ALL 8 SERVICES) ==================== -->
+    <section id="services" class="py-16 sm:py-24 cad-grid-light border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header & Category Filter -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-crimson-700">
+              <span class="w-6 h-0.5 bg-crimson-700"></span>
+              <span>Core Engineering &amp; Costing Portfolio</span>
+            </span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 mt-2 tracking-tight">
+              Our Specialized Consulting Services
+            </h2>
+            <p class="text-slate-600 mt-2 max-w-2xl text-sm sm:text-base">
+              Click any service card to inspect complete technical deliverables or initiate a project consultation.
+            </p>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="inline-flex flex-wrap gap-2 bg-white p-1.5 rounded-xl border border-slate-200 shadow-sm self-start">
+            <button type="button" data-filter="all" class="service-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-bold bg-navy-900 text-white transition-colors">
+              All Services (8)
+            </button>
+            <button type="button" data-filter="building" class="service-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
+              Building &amp; DPR (4)
+            </button>
+            <button type="button" data-filter="infra" class="service-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
+              Infrastructure &amp; Pre-Bid (4)
+            </button>
+          </div>
+        </div>
+
+        <!-- 8 Services Grid -->
+        <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Service 1 -->
+          <article data-category="building" class="service-card bg-white rounded-2xl border border-slate-200 p-6 shadow-card hover:shadow-elevated hover:border-navy-700 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center group-hover:bg-crimson-700 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold text-slate-400">01</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">Structural Design of RCC Building</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Seismic-resistant RCC framing, foundation design, bar bending schedules (BBS), and Good-For-Construction (GFC) structural drawings per IS 456 &amp; IS 1893.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="rcc-design" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="Structural Design of RCC Building" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 2 -->
+          <article data-category="building" class="service-card bg-white rounded-2xl border border-slate-200 p-6 shadow-card hover:shadow-elevated hover:border-navy-700 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center group-hover:bg-crimson-700 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold text-slate-400">02</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">Architectural Plan of Building</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Functional floor plans, municipal submission drawings, elevations, cross-sections, and space-optimized layouts for residential &amp; commercial buildings.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="arch-plan" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="Architectural Plan of Building" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 3 -->
+          <article data-category="building" class="service-card bg-white rounded-2xl border border-slate-200 p-6 shadow-card hover:shadow-elevated hover:border-navy-700 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center group-hover:bg-crimson-700 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold text-slate-400">03</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">Cost Estimation of Building Project</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Item-wise Bill of Quantities (BOQ), DSR/SOR rate analysis, material takeoff, and bank loan/tender valuation estimates with high accuracy.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="building-cost" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="Cost Estimation of Building Project" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 4 -->
+          <article data-category="infra" class="service-card bg-white rounded-2xl border border-slate-200 p-6 shadow-card hover:shadow-elevated hover:border-navy-700 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center group-hover:bg-crimson-700 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold text-slate-400">04</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">Highway Project</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Geometric alignment, pavement design, culverts, minor/major bridges, retaining walls, and drainage consultancy per IRC &amp; MoRTH standards.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="highway" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="Highway Project" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 5 -->
+          <article data-category="infra" class="service-card bg-white rounded-2xl border border-slate-200 p-6 shadow-card hover:shadow-elevated hover:border-navy-700 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center group-hover:bg-crimson-700 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 19h16M5 19V11a7 7 0 0114 0v8M9 19v-5a3 3 0 016 0v5" />
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold text-slate-400">05</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">Tunnel</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Tunnel cross-section quantity assessment, portal structures, rock support BOQ, lining estimation, and feasibility evaluation for road &amp; rail corridors.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="tunnel" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="Tunnel" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 6 -->
+          <article data-category="infra" class="service-card bg-white rounded-2xl border border-slate-200 p-6 shadow-card hover:shadow-elevated hover:border-navy-700 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center group-hover:bg-crimson-700 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 17l4-10m12 10l-4-10M7 10h10M6 14h12M5 18h14" />
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold text-slate-400">06</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">Railway Projects</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Formation earthwork, ROB/RUB structures, railway bridges, station building engineering, and track-bed quantity &amp; cost consultancy.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="railway" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="Railway Projects" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 7 -->
+          <article data-category="infra" class="service-card bg-white rounded-2xl border-2 border-crimson-700/25 p-6 shadow-card hover:shadow-elevated hover:border-crimson-700 transition-all flex flex-col justify-between group relative">
+            <span class="absolute top-3 right-3 px-2 py-0.5 rounded bg-crimson-50 text-crimson-700 font-mono text-[10px] font-bold">100+ BIDS</span>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-crimson-700 text-white flex items-center justify-center">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">Pre-Bid Estimation of EPC and HAM Highway &amp; Railway Project</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Rapid, high-precision pre-bid quantity takeoff, schedule-B/C verification, structural steel/concrete estimation, and competitive tender costing.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="pre-bid" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="Pre-Bid Estimation of EPC and HAM Highway & Railway Project" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 8 -->
+          <article data-category="building" class="service-card bg-white rounded-2xl border border-slate-200 p-6 shadow-card hover:shadow-elevated hover:border-navy-700 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center group-hover:bg-crimson-700 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold text-slate-400">08</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-navy-900 leading-snug">DPR Preparation of Building Projects</h3>
+              <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                Complete Detailed Project Reports (DPR) integrating architectural layouts, structural concepts, abstract of cost, specifications, and implementation schedules.
+              </p>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" data-service-id="dpr-building" class="open-service-modal text-xs font-extrabold uppercase tracking-wider text-crimson-700 hover:text-navy-900 inline-flex items-center gap-1.5 transition-colors">
+                <span>View Scope</span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" data-inquire-service="DPR Preparation of Building Projects" class="quick-inquire-btn text-xs font-semibold text-navy-900 hover:underline">
+                Get Quote
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR STRENGTH SECTION ==================== -->
+    <section id="strength" class="py-16 sm:py-24 bg-navy-950 text-white border-b-4 border-crimson-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-crimson-500">
+            <span class="w-6 h-0.5 bg-crimson-500"></span>
+            <span>Why Clients Trust Nippon Consulting Services</span>
+            <span class="w-6 h-0.5 bg-crimson-500"></span>
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mt-2 tracking-tight">
+            Our Strength
+          </h2>
+          <p class="text-slate-300 mt-3 text-sm sm:text-base">
+            Every architectural plan, structural drawing, and pre-bid cost estimate is engineered around three core commitments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Strength 1: On-Time Completion -->
+          <div class="bg-navy-900 rounded-2xl p-8 border border-navy-800 hover:border-crimson-600 transition-all shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-crimson-700 text-white flex items-center justify-center mb-6 shadow-md">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="text-xs font-mono font-bold uppercase tracking-widest text-crimson-500 mb-1">Pillar 01</div>
+            <h3 class="text-xl font-extrabold text-white">On-Time Completion</h3>
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+              Strict milestone tracking for GFC structural drawings, municipal plans, DPR submissions, and time-critical EPC/HAM tender deadlines so your site and bid schedules never slip.
+            </p>
+          </div>
+
+          <!-- Strength 2: Economic Building Design -->
+          <div class="bg-navy-900 rounded-2xl p-8 border border-navy-800 hover:border-crimson-600 transition-all shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-crimson-700 text-white flex items-center justify-center mb-6 shadow-md">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div class="text-xs font-mono font-bold uppercase tracking-widest text-crimson-500 mb-1">Pillar 02</div>
+            <h3 class="text-xl font-extrabold text-white">Economic Building Design</h3>
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+              Value-engineered structural framing and optimized reinforcement detailing that minimize excess steel and concrete consumption while upholding full IS-code safety margins.
+            </p>
+          </div>
+
+          <!-- Strength 3: Reasonable Price -->
+          <div class="bg-navy-900 rounded-2xl p-8 border border-navy-800 hover:border-crimson-600 transition-all shadow-lg">
+            <div class="w-14 h-14 rounded-2xl bg-crimson-700 text-white flex items-center justify-center mb-6 shadow-md">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="text-xs font-mono font-bold uppercase tracking-widest text-crimson-500 mb-1">Pillar 03</div>
+            <h3 class="text-xl font-extrabold text-white">Reasonable Price</h3>
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+              Transparent, competitive consultancy fee structures tailored for individual homeowners, real-estate developers, and EPC contractors—delivering high-value engineering without hidden charges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT US SECTION ==================== -->
+    <section id="contact" class="py-16 sm:py-24 cad-grid-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12">
+          <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-crimson-700">
+            <span class="w-6 h-0.5 bg-crimson-700"></span>
+            <span>Get In Touch</span>
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 mt-2 tracking-tight">
+            Contact Us &amp; Project Consultation
+          </h2>
+          <p class="text-slate-600 mt-2 text-sm sm:text-base">
+            Reach out directly to our Uttar Dinajpur or Guwahati office, or submit your project requirements below to generate an instant consultation dispatch.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          <!-- Left Column: Direct Office & Contact Cards -->
+          <div class="lg:col-span-5 space-y-5">
+            <!-- Office Locations Card -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-card">
+              <div class="flex items-start gap-4">
+                <div class="w-11 h-11 rounded-xl bg-navy-900 text-white flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="text-base font-extrabold text-navy-900">Office Addresses</h3>
+                  <div class="text-sm text-slate-700">
+                    <span class="font-bold text-crimson-700 block text-xs uppercase tracking-wider">West Bengal Office</span>
+                    Shop No. 2, NH-31, Hatwar, Uttar Dinajpur, WB
+                  </div>
+                  <div class="text-sm text-slate-700 pt-1 border-t border-slate-100">
+                    <span class="font-bold text-crimson-700 block text-xs uppercase tracking-wider">Assam Office</span>
+                    Rajgarh Road, Guwahati, Assam - 781007, India
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone & WhatsApp Card -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-card space-y-4">
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-navy-900 text-white flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Direct Phone</div>
+                    <a href="tel:+919749805844" class="text-base font-extrabold text-navy-900 hover:text-crimson-700 font-mono">+91 97498 05844</a>
+                  </div>
+                </div>
+                <button type="button" data-copy="+91 97498 05844" class="copy-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-xs font-bold text-navy-900 transition-colors">
+                  Copy
+                </button>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-500">WhatsApp Desk</div>
+                    <a href="https://wa.me/918013229177" target="_blank" rel="noopener noreferrer" class="text-base font-extrabold text-navy-900 hover:text-emerald-700 font-mono">+91 80132 29177</a>
+                  </div>
+                </div>
+                <button type="button" data-copy="+91 80132 29177" class="copy-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-xs font-bold text-navy-900 transition-colors">
+                  Copy
+                </button>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-11 h-11 rounded-xl bg-crimson-700 text-white flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Official Email</div>
+                    <a href="mailto:neservices.2021@gmail.com" class="text-sm sm:text-base font-extrabold text-navy-900 hover:text-crimson-700 font-mono truncate block">neservices.2021@gmail.com</a>
+                  </div>
+                </div>
+                <button type="button" data-copy="neservices.2021@gmail.com" class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-navy-900 hover:text-white text-xs font-bold text-navy-900 transition-colors">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Validated Consultation Inquiry Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-elevated">
+              <div class="border-b border-slate-200 pb-4 mb-6">
+                <h3 class="text-xl font-extrabold text-navy-900">Submit Project Inquiry</h3>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">Fill out the details below to generate an instant inquiry reference and send directly via WhatsApp or Email.</p>
+              </div>
+
+              <form id="consultationForm" novalidate class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="clientName" class="block text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-1.5">Full Name / Organization *</label>
+                    <input id="clientName" name="clientName" type="text" required placeholder="e.g., R. K. Infrastructure Pvt. Ltd." class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-navy-950 focus:outline-none focus:ring-2 focus:ring-navy-800" />
+                    <p id="err-clientName" class="hidden text-xs text-crimson-700 font-semibold mt-1">Please enter your name or organization.</p>
+                  </div>
+
+                  <div>
+                    <label for="clientPhone" class="block text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-1.5">Phone / WhatsApp Number *</label>
+                    <input id="clientPhone" name="clientPhone" type="tel" required placeholder="e.g., +91 98300 XXXXX" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-navy-950 focus:outline-none focus:ring-2 focus:ring-navy-800" />
+                    <p id="err-clientPhone" class="hidden text-xs text-crimson-700 font-semibold mt-1">Please enter a valid contact number.</p>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="clientEmail" class="block text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-1.5">Email Address (Optional)</label>
+                    <input id="clientEmail" name="clientEmail" type="email" placeholder="e.g., projects@company.com" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-navy-950 focus:outline-none focus:ring-2 focus:ring-navy-800" />
+                  </div>
+
+                  <div>
+                    <label for="projectLocation" class="block text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-1.5">Project Location / State *</label>
+                    <input id="projectLocation" name="projectLocation" type="text" required placeholder="e.g., Guwahati, Assam / Siliguri, WB" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-navy-950 focus:outline-none focus:ring-2 focus:ring-navy-800" />
+                    <p id="err-projectLocation" class="hidden text-xs text-crimson-700 font-semibold mt-1">Please specify the project location.</p>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="serviceSelect" class="block text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-1.5">Required Service *</label>
+                  <select id="serviceSelect" name="serviceSelect" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-navy-950 focus:outline-none focus:ring-2 focus:ring-navy-800">
+                    <option value="Structural Design of RCC Building">Structural Design of RCC Building</option>
+                    <option value="Architectural Plan of Building">Architectural Plan of Building</option>
+                    <option value="Cost Estimation of Building Project">Cost Estimation of Building Project</option>
+                    <option value="Highway Project">Highway Project</option>
+                    <option value="Tunnel">Tunnel</option>
+                    <option value="Railway Projects">Railway Projects</option>
+                    <option value="Pre-Bid Estimation of EPC and HAM Highway & Railway Project">Pre-Bid Estimation of EPC and HAM Highway &amp; Railway Project</option>
+                    <option value="DPR Preparation of Building Projects">DPR Preparation of Building Projects</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="projectDetails" class="block text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-1.5">Project Scope, Area / Length &amp; Timeline *</label>
+                  <textarea id="projectDetails" name="projectDetails" rows="4" required placeholder="Describe plot size, number of floors (e.g., G+4), highway/railway chainage length, or tender submission deadline..." class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-navy-950 focus:outline-none focus:ring-2 focus:ring-navy-800"></textarea>
+                  <p id="err-projectDetails" class="hidden text-xs text-crimson-700 font-semibold mt-1">Please provide brief project details.</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-1">
+                  <button type="submit" class="flex-1 py-3.5 px-6 rounded-xl bg-crimson-700 hover:bg-crimson-800 text-white font-bold text-sm shadow-md transition-colors">
+                    Generate Inquiry &amp; Dispatch Options
+                  </button>
+                  <button id="directWhatsappSubmit" type="button" class="py-3.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-colors">
+                    Send via WhatsApp Now
+                  </button>
+                </div>
+              </form>
+
+              <!-- Form Confirmation & Dispatch Panel -->
+              <div id="formSuccessPanel" class="hidden mt-6 p-5 rounded-2xl bg-navy-50 border-2 border-navy-900 space-y-4">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-600 text-white font-mono text-xs font-bold">INQUIRY PREPARED</span>
+                    <h4 class="text-base font-extrabold text-navy-900 mt-1.5">Reference ID: <span id="inquiryRefId" class="font-mono text-crimson-700">NCS-2026-0000</span></h4>
+                    <p class="text-xs text-slate-600 mt-0.5">Choose your preferred instant channel below to transmit this brief directly to Er. Md Shams Tabrez, MIE:</p>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  <a id="dispatchWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold text-center transition-colors">
+                    1. Send on WhatsApp
+                  </a>
+                  <a id="dispatchEmailBtn" href="#" class="py-2.5 px-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-xs font-bold text-center transition-colors">
+                    2. Send via Email
+                  </a>
+                  <button id="downloadBriefBtn" type="button" class="py-2.5 px-3 rounded-xl bg-white border border-slate-300 hover:bg-slate-100 text-navy-900 text-xs font-bold text-center transition-colors">
+                    3. Download Brief (.txt)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-navy-950 text-slate-300 border-t border-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+        <!-- Brand Column -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="inline-block bg-white rounded-xl px-3.5 py-2.5">
+            <svg class="h-11 w-auto" role="img" aria-label="NIPPON CONSULTING SERVICES">
+              <use href="#nippon-logo"></use>
+            </svg>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Led by <strong class="text-white">Er. MD SHAMS TABREZ, MIE</strong> — Principal Structural Engineer &amp; Consultant (IAStructE AM-518 • IEI M-1857295 • GMC Reg. TR/RTP/04/Engg(C).Sep/26/11).
+          </p>
+          <p class="text-xs text-slate-400">
+            Shop No. 2, NH-31, Hatwar, Uttar Dinajpur, WB &nbsp;|&nbsp; Rajgarh Road, Guwahati, Assam - 781007, India
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-extrabold uppercase tracking-widest text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#home" class="hover:text-white transition-colors">Home / Introduction</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">About &amp; Credentials</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Engineering &amp; Estimation Services</a></li>
+            <li><a href="#strength" class="hover:text-white transition-colors">Our Strength</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Services Summary -->
+        <div class="md:col-span-4">
+          <h4 class="text-xs font-extrabold uppercase tracking-widest text-white mb-4">Core Practice Areas</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <li>• Structural Design &amp; Architectural Plan of Buildings</li>
+            <li>• Cost Estimation &amp; DPR Preparation of Buildings</li>
+            <li>• Highway, Tunnel &amp; Railway Infrastructure Projects</li>
+            <li>• Pre-Bid Estimation of EPC &amp; HAM Projects</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-navy-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>&copy; <span id="currentYear"></span> NIPPON CONSULTING SERVICES. All Rights Reserved.</p>
+        <p class="font-mono">Phone: +91 97498 05844 • WhatsApp: +91 80132 29177</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SERVICE SCOPE MODAL ==================== -->
+  <div id="serviceModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-950/75 backdrop-blur-sm p-4" role="dialog" aria-modal="true" aria-labelledby="modalServiceTitle">
+    <div class="bg-white rounded-2xl max-w-xl w-full overflow-hidden shadow-2xl border border-slate-200">
+      <div class="bg-navy-900 px-6 py-5 border-b-4 border-crimson-700 flex items-start justify-between gap-4">
+        <div>
+          <span id="modalServiceBadge" class="text-[11px] font-mono font-bold uppercase tracking-widest text-crimson-500">Technical Deliverables</span>
+          <h3 id="modalServiceTitle" class="text-lg sm:text-xl font-extrabold text-white mt-0.5">Service Title</h3>
+        </div>
+        <button id="closeServiceModal" type="button" class="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-navy-800 transition-colors" aria-label="Close Modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4">
+        <p id="modalServiceDesc" class="text-sm text-slate-700 leading-relaxed"></p>
+        <div>
+          <div class="text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-2">Key Deliverables Included:</div>
+          <ul id="modalDeliverablesList" class="space-y-2 text-sm text-slate-700"></ul>
+        </div>
+        <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+          <button id="modalInquireBtn" type="button" class="flex-1 py-3 px-5 rounded-xl bg-crimson-700 hover:bg-crimson-800 text-white font-bold text-sm transition-colors">
+            Inquire About This Service
+          </button>
+          <button id="modalCancelBtn" type="button" class="py-3 px-5 rounded-xl bg-slate-100 hover:bg-slate-200 text-navy-900 font-bold text-sm transition-colors">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FLOATING WHATSAPP QUICK BUTTON ==================== -->
+  <a href="https://wa.me/918013229177?text=Hello%20Nippon%20Consulting%20Services%2C%20I%20would%20like%20to%20discuss%20an%20engineering%20%2F%20estimation%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-40 flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm px-4 py-3 rounded-full shadow-xl transition-transform hover:scale-105">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+    </svg>
+    <span class="hidden sm:inline">WhatsApp Consultation</span>
+  </a>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toastNotification" role="status" aria-live="polite" class="fixed bottom-20 right-5 z-50 bg-navy-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl shadow-xl border-l-4 border-crimson-600 opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
+    Copied to clipboard
+  </div>
+
+  <!-- ==================== APPLICATION LOGIC ==================== -->
+  <script>
+    (function () {
+      // Set Current Year
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Toast Helper
+      const toastEl = document.getElementById('toastNotification');
+      let toastTimer = null;
+      function showToast(message) {
+        if (!toastEl) return;
+        toastEl.textContent = message;
+        toastEl.classList.remove('opacity-0', 'translate-y-4');
+        toastEl.classList.add('opacity-100', 'translate-y-0');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toastEl.classList.remove('opacity-100', 'translate-y-0');
+          toastEl.classList.add('opacity-0', 'translate-y-4');
+        }, 3000);
+      }
+
+      // Mobile Navigation Drawer
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIconOpen = document.getElementById('menuIconOpen');
+      const menuIconClose = document.getElementById('menuIconClose');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden', !isHidden);
+          menuIconOpen.classList.toggle('hidden', isHidden);
+          menuIconClose.classList.toggle('hidden', !isHidden);
+          mobileMenuBtn.setAttribute('aria-expanded', String(isHidden));
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // Hero CAD Schematic Switcher
+      const schematicData = {
+        rcc: { title: 'Multi-Storey RCC Frame & Shear Core', svgId: 'svg-rcc' },
+        arch: { title: 'Architectural Floor Plan & Zoning', svgId: 'svg-arch' },
+        epc: { title: 'EPC & HAM Highway / Railway Pre-Bid BOQ', svgId: 'svg-epc' }
+      };
+
+      document.querySelectorAll('.schematic-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-schematic');
+          const info = schematicData[key];
+          if (!info) return;
+
+          document.getElementById('schematicTitle').textContent = info.title;
+          ['svg-rcc', 'svg-arch', 'svg-epc'].forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) el.classList.toggle('hidden', id !== info.svgId);
+          });
+
+          document.querySelectorAll('.schematic-tab').forEach((b) => {
+            const active = b === btn;
+            b.classList.toggle('bg-crimson-700', active);
+            b.classList.toggle('text-white', active);
+            b.classList.toggle('text-slate-300', !active);
+          });
+        });
+      });
+
+      // Service Category Filtering
+      document.querySelectorAll('.service-filter-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          document.querySelectorAll('.service-filter-btn').forEach((b) => {
+            const isSelected = b === btn;
+            b.classList.toggle('bg-navy-900', isSelected);
+            b.classList.toggle('text-white', isSelected);
+            b.classList.toggle('text-slate-700', !isSelected);
+          });
+
+          document.querySelectorAll('.service-card').forEach((card) => {
+            const cat = card.getAttribute('data-category');
+            const show = filter === 'all' || cat === filter;
+            card.classList.toggle('hidden', !show);
+          });
+        });
+      });
+
+      // Service Scope Modal Data & Logic
+      const serviceCatalog = {
+        'rcc-design': {
+          badge: 'Building Structural Engineering',
+          title: 'Structural Design of RCC Building',
+          desc: 'Complete 3D seismic analysis and economic RCC structural engineering for residential apartments, commercial complexes, institutional buildings, and industrial structures.',
+          deliverables: [
+            '3D Structural Modeling & Seismic Analysis (STAAD.Pro / ETABS per IS 1893)',
+            'Isolated, Combined, Raft & Pile Foundation Structural Drawings',
+            'Column, Beam, Slab & Staircase Reinforcement Detailing (IS 456 & SP 34)',
+            'Bar Bending Schedules (BBS) & Structural Design Calculation Report'
+          ]
+        },
+        'arch-plan': {
+          badge: 'Architectural Planning',
+          title: 'Architectural Plan of Building',
+          desc: 'Space-efficient, daylight-optimized architectural plans tailored to client requirements, Vastu principles, and local municipal/development authority byelaws.',
+          deliverables: [
+            'Concept Floor Plans & Furniture Layout Drawings',
+            'Municipal & GMC Approval Submission Drawings',
+            'Front/Side Elevations & Longitudinal/Cross Sections',
+            'Door-Window Schedules & Site Circulation Plan'
+          ]
+        },
+        'building-cost': {
+          badge: 'Quantity Surveying & Valuation',
+          title: 'Cost Estimation of Building Project',
+          desc: 'Detailed item-wise construction cost estimation and Bill of Quantities (BOQ) to establish accurate budgets, tender benchmarks, and bank project finance.',
+          deliverables: [
+            'Detailed Item-Wise Bill of Quantities (BOQ) & Measurement Sheets',
+            'Rate Analysis based on CPWD DSR / State PWD SOR & Market Rates',
+            'Cement, Reinforcement Steel & Finishing Material Abstract',
+            'Bank Loan & Project Valuation Abstract Sheet'
+          ]
+        },
+        'highway': {
+          badge: 'Transportation Infrastructure',
+          title: 'Highway Project',
+          desc: 'Engineering consultancy for National Highways, State Highways, and rural road corridors covering alignment, pavement, and cross-drainage structures.',
+          deliverables: [
+            'Horizontal & Vertical Alignment Review and Cross-Section Quantities',
+            'Flexible & Rigid Pavement Design Verification (IRC:37 / IRC:58)',
+            'Box Culverts, Pipe Culverts, Minor/Major Bridges & Retaining Walls',
+            'Highway Drainage, Slope Protection & Road Furniture BOQ'
+          ]
+        },
+        'tunnel': {
+          badge: 'Subsurface & Hill Infrastructure',
+          title: 'Tunnel',
+          desc: 'Technical quantity estimation and structural assessment for road and railway tunnels in hilly and complex geological terrains.',
+          deliverables: [
+            'Excavation Volume & Rock Mass Class-Wise Support Estimation',
+            'Shotcrete, Rock Bolts, Steel Ribs & Permanent RCC Lining Quantities',
+            'Tunnel Portal Cut-and-Cover & Slope Stabilization BOQ',
+            'Ventilation, Drainage & Electro-Mechanical Civil Interface Quantities'
+          ]
+        },
+        'railway': {
+          badge: 'Rail Corridor Engineering',
+          title: 'Railway Projects',
+          desc: 'Civil and structural consultancy for new railway lines, doubling/gauge conversion projects, ROB/RUB crossings, and station yard infrastructure.',
+          deliverables: [
+            'Formation Earthwork, Blanketing & Retaining Structure Quantities',
+            'Road Over Bridges (ROB), Road Under Bridges (RUB) & Major Rail Bridges',
+            'Station Buildings, Platforms, Foot Over Bridges (FOB) & Yard Drainage',
+            'RDSO & Indian Railways Standard Specification Compliance'
+          ]
+        },
+        'pre-bid': {
+          badge: '100+ Projects Completed',
+          title: 'Pre-Bid Estimation of EPC and HAM Highway & Railway Project',
+          desc: 'Specialized rapid-turnaround pre-bid engineering and quantity verification for contractors bidding on NHAI, MoRTH, State PWD, and Indian Railways EPC & HAM tenders.',
+          deliverables: [
+            'Complete Independent Quantity Takeoff from Tender Drawings & Alignment',
+            'Verification of Schedule-B, Schedule-C & Lump-Sum Scope Gaps',
+            'Structural Concrete, Reinforcement Steel & Earthwork Lead Chart Analysis',
+            'Competitive Bid Pricing Sheet & Technical Query Formulation'
+          ]
+        },
+        'dpr-building': {
+          badge: 'End-to-End Project Documentation',
+          title: 'DPR Preparation of Building Projects',
+          desc: 'Comprehensive Detailed Project Reports (DPR) for government, institutional, commercial, and housing development projects.',
+          deliverables: [
+            'Executive Summary, Site Reconnaissance & Feasibility Assessment',
+            'Preliminary Architectural Plans & Structural Framing Scheme',
+            'Detailed Cost Abstract, BOQ & Financial Phasing Schedule',
+            'Technical Specifications & Project Implementation Bar Chart'
+          ]
+        }
+      };
+
+      const serviceModal = document.getElementById('serviceModal');
+      const modalServiceBadge = document.getElementById('modalServiceBadge');
+      const modalServiceTitle = document.getElementById('modalServiceTitle');
+      const modalServiceDesc = document.getElementById('modalServiceDesc');
+      const modalDeliverablesList = document.getElementById('modalDeliverablesList');
+      const modalInquireBtn = document.getElementById('modalInquireBtn');
+      let currentModalServiceTitle = '';
+
+      function openServiceModal(serviceKey) {
+        const item = serviceCatalog[serviceKey];
+        if (!item || !serviceModal) return;
+        currentModalServiceTitle = item.title;
+        modalServiceBadge.textContent = item.badge;
+        modalServiceTitle.textContent = item.title;
+        modalServiceDesc.textContent = item.desc;
+        modalDeliverablesList.innerHTML = item.deliverables
+          .map(
+            (d) =>
+              `<li class="flex items-start gap-2.5"><span class="text-crimson-700 font-black mt-0.5">&#10003;</span><span>${d}</span></li>`
+          )
+          .join('');
+        serviceModal.classList.remove('hidden');
+        serviceModal.classList.add('flex');
+      }
+
+      function closeServiceModal() {
+        if (!serviceModal) return;
+        serviceModal.classList.add('hidden');
+        serviceModal.classList.remove('flex');
+      }
+
+      document.querySelectorAll('.open-service-modal').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          openServiceModal(btn.getAttribute('data-service-id'));
+        });
+      });
+
+      document.getElementById('closeServiceModal')?.addEventListener('click', closeServiceModal);
+      document.getElementById('modalCancelBtn')?.addEventListener('click', closeServiceModal);
+      serviceModal?.addEventListener('click', (e) => {
+        if (e.target === serviceModal) closeServiceModal();
+      });
+
+      function prefillAndScrollToContact(serviceName, customNote) {
+        const selectEl = document.getElementById('serviceSelect');
+        const detailsEl = document.getElementById('projectDetails');
+        const contactSection = document.getElementById('contact');
+
+        if (selectEl && serviceName) {
+          for (let i = 0; i < selectEl.options.length; i++) {
+            if (selectEl.options[i].value === serviceName) {
+              selectEl.selectedIndex = i;
+              break;
+            }
+          }
+        }
+        if (detailsEl && customNote) {
+          detailsEl.value = customNote;
+        }
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      modalInquireBtn?.addEventListener('click', () => {
+        closeServiceModal();
+        prefillAndScrollToContact(currentModalServiceTitle);
+      });
+
+      document.querySelectorAll('.quick-inquire-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          prefillAndScrollToContact(btn.getAttribute('data-inquire-service'));
+        });
+      });
+
+      // One-Click Copy Buttons
+      document.querySelectorAll('.copy-btn').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const textToCopy = btn.getAttribute('data-copy') || '';
+          try {
+            await navigator.clipboard.writeText(textToCopy);
+            showToast(`Copied: ${textToCopy}`);
+          } catch {
+            const tempInput = document.createElement('input');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(`Copied: ${textToCopy}`);
+          }
+        });
+      });
+
+      // Validated Consultation Form + WhatsApp / Email / Download Brief
+      const consultationForm = document.getElementById('consultationForm');
+      const formSuccessPanel = document.getElementById('formSuccessPanel');
+      const inquiryRefIdEl = document.getElementById('inquiryRefId');
+      const dispatchWhatsappBtn = document.getElementById('dispatchWhatsappBtn');
+      const dispatchEmailBtn = document.getElementById('dispatchEmailBtn');
+      const downloadBriefBtn = document.getElementById('downloadBriefBtn');
+      let generatedBriefText = '';
+      let generatedRefCode = '';
+
+      function validateAndBuildBrief() {
+        const nameInput = document.getElementById('clientName');
+        const phoneInput = document.getElementById('clientPhone');
+        const emailInput = document.getElementById('clientEmail');
+        const locationInput = document.getElementById('projectLocation');
+        const serviceInput = document.getElementById('serviceSelect');
+        const detailsInput = document.getElementById('projectDetails');
+
+        const checks = [
+          { input: nameInput, errId: 'err-clientName', valid: nameInput.value.trim().length >= 2 },
+          { input: phoneInput, errId: 'err-clientPhone', valid: phoneInput.value.trim().length >= 7 },
+          { input: locationInput, errId: 'err-projectLocation', valid: locationInput.value.trim().length >= 2 },
+          { input: detailsInput, errId: 'err-projectDetails', valid: detailsInput.value.trim().length >= 5 }
+        ];
+
+        let allValid = true;
+        checks.forEach(({ input, errId, valid }) => {
+          const errEl = document.getElementById(errId);
+          if (errEl) errEl.classList.toggle('hidden', valid);
+          input.classList.toggle('border-crimson-700', !valid);
+          if (!valid) allValid = false;
+        });
+
+        if (!allValid) {
+          showToast('Please complete all required fields marked with *');
+          return null;
+        }
+
+        const randNum = Math.floor(1000 + Math.random() * 9000);
+        generatedRefCode = `NCS-${new Date().getFullYear()}-${randNum}`;
+
+        generatedBriefText = [
+          `NIPPON CONSULTING SERVICES — PROJECT CONSULTATION BRIEF`,
+          `Reference ID: ${generatedRefCode}`,
+          `Date: ${new Date().toLocaleDateString('en-IN')}`,
+          `--------------------------------------------------`,
+          `Client / Organization: ${nameInput.value.trim()}`,
+          `Phone / WhatsApp: ${phoneInput.value.trim()}`,
+          `Email: ${emailInput.value.trim() || 'Not provided'}`,
+          `Project Location: ${locationInput.value.trim()}`,
+          `Requested Service: ${serviceInput.value}`,
+          `--------------------------------------------------`,
+          `Project Scope & Details:`,
+          `${detailsInput.value.trim()}`
+        ].join('\n');
+
+        return {
+          refCode: generatedRefCode,
+          brief: generatedBriefText,
+          service: serviceInput.value
+        };
+      }
+
+      consultationForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = validateAndBuildBrief();
+        if (!data) return;
+
+        inquiryRefIdEl.textContent = data.refCode;
+        dispatchWhatsappBtn.href = `https://wa.me/918013229177?text=${encodeURIComponent(data.brief)}`;
+        dispatchEmailBtn.href = `mailto:neservices.2021@gmail.com?subject=${encodeURIComponent(
+          `[${data.refCode}] Project Inquiry - ${data.service}`
+        )}&body=${encodeURIComponent(data.brief)}`;
+
+        formSuccessPanel.classList.remove('hidden');
+        formSuccessPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        showToast(`Inquiry ${data.refCode} ready to send`);
+      });
+
+      document.getElementById('directWhatsappSubmit')?.addEventListener('click', () => {
+        const data = validateAndBuildBrief();
+        if (!data) return;
+        const waUrl = `https://wa.me/918013229177?text=${encodeURIComponent(data.brief)}`;
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+      });
+
+      downloadBriefBtn?.addEventListener('click', () => {
+        if (!generatedBriefText) return;
+        const blob = new Blob([generatedBriefText], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${generatedRefCode || 'Nippon-Consulting-Inquiry'}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('Project brief downloaded');
+      });
+    })();
+  </script>
+</body>
+</html>
